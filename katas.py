@@ -56,3 +56,45 @@ def fibonacci(n):
         for _ in range(n):
             a, b = b, add(a, b)
         return a
+
+
+def test(got, expected):
+    if got == expected:
+        prefix = ' OK '
+    else:
+        prefix = '  X '
+    print('{} got: {}     expected: {}'.format(
+        prefix,
+        repr(got),
+        repr(expected)))
+
+
+def main():
+    add(2, 4)
+    print(add(2, 4))
+    multiply(6, -8)
+    print(multiply(6, -8))
+    power(2, 8)
+    print(power(2, 8))
+    factorial(4)
+    print(factorial(4))
+    fibonacci(8)
+    print(fibonacci(0))
+    print(fibonacci(1))
+    print(fibonacci(2))
+    print(fibonacci(3))
+    print(fibonacci(4))
+    print(fibonacci(5))
+    print(fibonacci(6))
+    print(fibonacci(7))
+    print(fibonacci(8))
+
+# print('add')
+# print('\nmultiply')
+# print('\npower')
+# print('\nfactorial')
+# print('\nfibonacci')
+
+
+if __name__ == '__main__':
+    main()
